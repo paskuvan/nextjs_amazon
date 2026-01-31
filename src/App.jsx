@@ -1,9 +1,13 @@
-import React from 'react'
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
 
-const App = () => {
-  return (
-    <div>App</div>
-  )
+export default function App () {
+  return <>
+  <Header />
+  <main>
+
+  </main>
+  <Footer />
+  </>;
+  
 }
-
-export default App
