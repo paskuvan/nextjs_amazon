@@ -2,6 +2,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Hero from './components/Hero.jsx';
 import BrandBanner from './components/BrandBanner.jsx';
+import CourseCategories from './components/CourseCategories.jsx';
 
 export default function App () {
   return <>
@@ -9,6 +10,7 @@ export default function App () {
   <main>
     <Hero />
     <BrandBanner/>
+    <CourseCategories/>
   </main>
   <Footer />
   </>;
