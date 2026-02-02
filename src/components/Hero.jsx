@@ -1,5 +1,7 @@
 import { RiStarFill } from '@remixicon/react'
 import Button from './Button.jsx';
+import { motion } from 'motion/react';
+import * as variants from '../motion/animation.js'
 
 
 export default function Hero() {
