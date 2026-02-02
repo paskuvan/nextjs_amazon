@@ -1,16 +1,59 @@
-# React + Vite
+# 📚 Learning ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1-38BDF8?logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Currently, two official plugins are available:
+🚀 **Learning ReactJS** es una plataforma de **e-learning** desarrollada con **React**, enfocada en el aprendizaje progresivo de conceptos fundamentales del ecosistema frontend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto está pensado como una base educativa, modular y escalable, ideal para estudiantes, autodidactas o como starter de una plataforma educativa más grande.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Características
 
-## Expanding the ESLint configuration
+- ⚛️ Construido con **React**
+- ⚡ Bundler moderno con **Vite**
+- 🎨 Estilos con **Tailwind CSS**
+- 📱 Diseño responsive
+- 🧩 Componentes reutilizables
+- 📚 Enfoque educativo / e-learning
+- ♿ Base preparada para accesibilidad y buenas prácticas UX
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **React**
+- **Vite**
+- **JavaScript (ES6+)**
+- **Tailwind CSS**
+- **HTML5 / CSS3**
+
+---
+
+## 📦 Instalación y uso
+
+Sigue estos pasos para ejecutar el proyecto en local:
+
+### 1️⃣ Clonar el repositorio
+```bash
+git clone https://github.com/paskuvan/learning-reactjs.git
+
+cd learning-reactjs
+
+npm install
+
+npm run dev
+
+src/
+ ├─ components/
+ ├─ pages/
+ ├─ assets/
+ ├─ index.css
+ ├─ main.jsx
+ └─ App.jsx
+
+
