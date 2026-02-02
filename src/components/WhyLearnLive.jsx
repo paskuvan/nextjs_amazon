@@ -1,12 +1,17 @@
 import { RiCheckboxCircleLine } from '@remixicon/react'
 import { benefits } from '../data/data'
+import { motion } from 'motion/react';
+import * as variants from '../motion/animation.js'
 
 export default function WhyLearnLive() {
   return (
     <section className='py-20'>
-        <div className='container grid gap-16 lg:grid-cols-[0.7fr_1fr] lg:items-center'>
+        <motion.div variants={variants.staggerContainer} 
+            initial="hidden" 
+            whileInView={'show'} 
+            viewport={{once:true}} className='container grid gap-16 lg:grid-cols-[0.7fr_1fr] lg:items-center'>
             {/* Image */}
-             <div className='relative mx-auto p-5 order-1 lg:order-first'>
+             <motion.div variants={variants.fadeIn} className='relative mx-auto p-5 order-1 lg:order-first'>
             <div className='max-w-92.5 w-full shadow-img mx-auto rounded-t-full bg-lime-600 flex items-center justify-center overflow-hidden pt-9 px-2.5'>
                 <img 
                 src="/images/section-img.png"
@@ -27,34 +32,34 @@ export default function WhyLearnLive() {
          /> 
 
          
-        </div>
+            </motion.div>
 
          {/* Content */}   
 
          <div>
-            <h2 className='section-title mb-2'>
+            <motion.h2 variants={variants.fadeInUp} className='section-title mb-2'>
                 Why learn live with Brischo?
-            </h2>
-            <p className='text'>
+            </motion.h2>
+            <motion.p variants={variants.fadeInUp} className='text'>
                 Join live classes led by expert instructors, engage in real-time discussions, and collaborate with peers to enhance your learning experience.
-            </p>
+            </motion.p>
 
              {/* Content */}   
 
              <ul className='mt-8 space-y-4'>
                 {benefits.map((benefit) => (
-                    <li className='flex items-start gap-3' key={benefit}>
+                    <motion.li variants={variants.fadeInUp} className='flex items-start gap-3' key={benefit}>
                         <span className='text-lime-600 shrink-0'>
                             <RiCheckboxCircleLine />
                         </span>
                         <p className='text font-medium'>
                             {benefit}
                         </p>
-                    </li>
+                    </motion.li>
                 ))}
              </ul>
          </div>
-        </div>
+        </motion.div>
     </section>
   )
 }

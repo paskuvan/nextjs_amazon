@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { courses } from '../data/data';
 import { RiStarFill } from '@remixicon/react';
 import Button from './Button';
+import { motion } from 'motion/react';
+import * as variants from '../motion/animation.js'
 
 export default function Courses() {
     const [activeTab, setActiveTab] = useState('All');
@@ -11,17 +13,22 @@ export default function Courses() {
     })
   return (
     <section className='py-20 bg-gray-50'>
-        <div className='container'>
+        <motion.div 
+        variants={variants.staggerContainer} 
+        initial="hidden" 
+        whileInView={'show'} 
+        viewport={{once:true}}  
+        className='container'>
              {/* Title */}
             <div className='text-center space-y-2.5'>
-                <h2 className='section-title'>Explore courses</h2>
-                <p className='text max-w-2xl mx-auto'>Browse through a wide range of courses to enhance your skills and knowledge.</p>
+                <motion.h2 variants={variants.fadeInUp} className='section-title'>Explore courses</motion.h2>
+                <motion.p variants={variants.fadeInUp} className='text max-w-2xl mx-auto'>Browse through a wide range of courses to enhance your skills and knowledge.</motion.p>
             </div>
 
              {/* Wrapper */}
              <div className='mt-7'>
                  {/* Tabs */}
-                <div className='flex flex-wrap justify-center gap-4'>
+                <motion.div variants={variants.fadeInUp} className='flex flex-wrap justify-center gap-4'>
                     {['All', 'Popular', 'Recent', 'Design', 'Marketing', 'Coding'].map(
                         (tab) => (
                             <button 
@@ -37,9 +44,9 @@ export default function Courses() {
                             </button>
                         )
                     )}
-                </div>
+                </motion.div>
             {/* Card Wrapper */}
-            <div className='mt-10 sm:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+            <motion.div variants={variants.fadeInUp}className='mt-10 sm:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
                     {filteredCourses.map(course => (
                         // Card
                         <div className='bg-white rounded-xl border border-neutral-200 overflow-hidden 
@@ -84,11 +91,13 @@ export default function Courses() {
                             </div>
                         </div>
                     ))}
-            </div>
+            </motion.div>
 
-            <Button label={'Explore all courses'} primary classes={`mt-12 mx-auto block`}/>
+           <motion.div variants={variants.fadeInUp}>
+             <Button label={'Explore all courses'} primary classes={`mt-12 mx-auto block`}/>
+           </motion.div>
              </div>
-        </div>
+        </motion.div>
     </section>
   )
 }
